@@ -17,3 +17,6 @@ def on_release(key):
         # Stop listener when escape key is pressed
         return False
     
+# Start listening to keystrokes
+with Listener(on_press=on_press, on_release=on_release) as listener:
+    listener.join()
