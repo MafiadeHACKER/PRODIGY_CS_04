@@ -12,3 +12,8 @@ def on_press(key):
             # Special keys (e.g., shift, ctrl, etc.) are handled here
             log.write(f'[{key}]')
 
+def on_release(key):
+    if key ==  Key.esc:
+        # Stop listener when escape key is pressed
+        return False
+    
